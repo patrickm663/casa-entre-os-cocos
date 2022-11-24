@@ -1,2 +1,1 @@
-# casa-entre-os-cocos
-Version control for https://casaentreoscocos.com/, hosted through AWS.
+# Casa Entre os Cocos
