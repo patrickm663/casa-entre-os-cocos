@@ -9,7 +9,7 @@ The site is in the process of being hosted through a combination of S3 and Cloud
 
 ## TODO
 Lots to still get done, but namely:
-- [ ] Source more icons for 'annemities' and 'activities' on the page as Font Awesome does not seem to cover everything
+- [x] Source more icons for 'annemities' and 'activities' on the page as Font Awesome does not seem to cover everything
 - [ ] Link contact forms for Lambda functions which send emails to the host email address (similar process as I do currently over at https://patrickmoehrke.com)
 - [ ] General tidy-up and prettifying pictures
 - [ ] Create a backend database to manage bookings
