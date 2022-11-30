@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.css">
+<link rel="icon" type="image/x-icon" href="images/palm-tree.png">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 .mySlides {display: none}
@@ -15,6 +16,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 </head>
 <body class="w3-content w3-border-left w3-border-right" onload="setDate(); showMap()">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"></script>
+<script src="https://kit.fontawesome.com/03d80cc6d2.js" crossorigin="anonymous"></script>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
@@ -112,7 +114,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <div class="w3-col s6">
         <p><i class="fa fa-fw fa-sun-o"></i> Beach: 300m</p>
         <p><i class="fa fa-fw fa-paw"></i> Pet-friendly</p>
-        <p><i class="fa fa-fw fa-paw"></i> 4x4 accessible</p>
+        <p><i class="fa fa-fw fa-car"></i> 4x4 accessible</p>
       </div>
     </div>
     <hr>
@@ -121,13 +123,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <div class="w3-row w3-large">
       <div class="w3-col s6">
         <p><i class="fa fa-fw fa-cutlery"></i> Self-catering</p>
-        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
         <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
       </div>
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-thermometer"></i> Fridge</p>
-        <p><i class="fa fa-fw fa-wheelchair"></i> Freezer</p>
-        <p><i class="fa fa-fw fa-wheelchair"></i> Gas burner</p>
+        <p><i class="fa fa-fw fa-snowflake"></i> Fridge</p>
+        <p><i class="fa fa-fw fa-snowflake"></i> Freezer</p>
+        <p><i class="fa fa-fw fa-fire-burner"></i> Gas burner</p>
       </div>
     </div>
     <hr>
@@ -135,14 +137,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <h4><strong>Nearby Activities</strong></h4>
     <div class="w3-row w3-large">
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-shower"></i> SCUBA</p>
-        <p><i class="fa fa-fw fa-shower"></i> Snorkling</p>
-        <p><i class="fa fa-fw fa-shower"></i> Surfing</p>
+        <p><i class="fa-solid fa-person-swimming"></i> SCUBA</p>
+        <p><i class="fa-solid fa-person-swimming"></i> Snorkling</p>
+        <p><i class="fa-solid fa-person-swimming"></i> Surfing</p>
       </div>
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-cutlery"></i> Whale Watching</p>
-        <p><i class="fa fa-fw fa-thermometer"></i> Restaurant to catch the game</p>
-        <p><i class="fa fa-fw fa-wheelchair"></i> </p>
+        <p><i class="fas fa-fish"></i> Whale Watching</p>
+        <p><i class="fa fa-fw fa-cutlery"></i> Restaurant to catch the game</p>
       </div>
     </div>
   </div>
@@ -215,10 +216,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
         var today = new Date();
         document.getElementById("checkIn").min = today.toISOString().split('T')[0];
         document.getElementById("checkIn").value = today.toISOString().split('T')[0];
-        today.setDate(today.getDate() + 1);
-        document.getElementById("checkOut").min = today.toISOString().split('T')[0];
-        today.setDate(today.getDate() + 3);
-        document.getElementById("checkOut").value = today.toISOString().split('T')[0];
+        document.getElementById("checkOut").min = document.getElementById("checkIn").value;
+        document.getElementById("checkOut").value = document.getElementById("checkIn").value;
     }
 
     function showMap() {
