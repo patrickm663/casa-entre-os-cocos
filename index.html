@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Casa Entre os Cocos</title>
 <meta charset="UTF-8">
@@ -17,41 +17,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 <body class="w3-content w3-border-left w3-border-right" onload="setDate(); showMap()">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"></script>
 <script src="https://kit.fontawesome.com/03d80cc6d2.js" crossorigin="anonymous"></script>
+<script src="src/custom.js"></script>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
-    <h3>House rental</h3>
-    <h3>from R3 200</h3>
-    <h6>per night</h6>
-    <hr>
-    <div>
-      <p><label><i class="fa fa-calendar-check-o"></i> Check In</label></p>
-      <input class="w3-input w3-border" type="date" placeholder="YYYY MM DD" name="CheckIn" id="checkIn" required>          
-      <p><label><i class="fa fa-calendar-o"></i> Check Out</label></p>
-      <input class="w3-input w3-border" type="date" placeholder="YYYY MM DD" name="CheckOut" id="checkOut"required>         
-      <p><label><i class="fa fa-male"></i> Adults</label></p>
-      <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="8">              
-      <p><button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button></p>
-    </div>
-  </div>
-  <div class="w3-bar-block">
-    <a href="mailto:casaentreoscocos@gmail.com" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Email Directly</a>
-  </div>
-</nav>
 
 <!-- Top menu on small screens -->
 <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <span class="w3-bar-item">Beach House</span>
-  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  <span class="w3-bar-item">Casa Entre os Cocos</span>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-white" style="margin-left:260px">
+<div class="w3-main w3-white" style="margin-left:360px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:80px"></div>
@@ -59,6 +35,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <div class="w3-container">
     <h2 class="w3-text-blue">Casa Entre os Cocos</h2>
     <p>Meaning <em>House among the Coconuts</em>, Casa Entre os Cocos is a relaxing, self-catering getaway in Guinjata Bay, Inhambane, Mozambique.</p>
+    <h3 class="w3-text-blue">Full house rental from R3 200 per night</h3>
     <hr>
 
   <!-- Slideshow Header -->
@@ -107,14 +84,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <h4><strong>The space</strong></h4>
     <div class="w3-row w3-large">
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-male"></i> Sleeps: 8</p>
-        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 3</p>
-        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 4</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Self-catering</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Sleeps: 8</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Bathrooms: 4</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Bedrooms: 4</p>
       </div>
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-sun-o"></i> Beach: 300m</p>
-        <p><i class="fa fa-fw fa-paw"></i> Pet-friendly</p>
-        <p><i class="fa fa-fw fa-car"></i> 4x4 accessible</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Beach: 300m</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Pet-friendly</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> 4x4 accessible</p>
+        <p><i class="fa fa-circle-o-notch fa-fw" style="width:30px"> </i> Small swimming pool</p>
       </div>
     </div>
     <hr>
@@ -122,14 +101,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <h4><strong>Amenities</strong></h4>
     <div class="w3-row w3-large">
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-cutlery"></i> Self-catering</p>
-        <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
-        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> 2 staff to cater to your needs</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Gas stove</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Microwave</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Fridge</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Chest freezer</p>
       </div>
       <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-snowflake"></i> Fridge</p>
-        <p><i class="fa fa-fw fa-snowflake"></i> Freezer</p>
-        <p><i class="fa fa-fw fa-fire-burner"></i> Gas burner</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Crockery & cutlery</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Showers & baths</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Linen</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Fans</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Mosquito nets</p>
       </div>
     </div>
     <hr>
@@ -137,13 +120,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <h4><strong>Nearby Activities</strong></h4>
     <div class="w3-row w3-large">
       <div class="w3-col s6">
-        <p><i class="fa-solid fa-person-swimming"></i> SCUBA</p>
-        <p><i class="fa-solid fa-person-swimming"></i> Snorkling</p>
-        <p><i class="fa-solid fa-person-swimming"></i> Surfing</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> SCUBA</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Snorkling</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Surfing</p>
       </div>
       <div class="w3-col s6">
-        <p><i class="fas fa-fish"></i> Whale Watching</p>
-        <p><i class="fa fa-fw fa-cutlery"></i> Restaurant to catch the game</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Whale watching</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Convenience store</p>
+        <p><i class="fa fa-check-square-o" style="width:30px"> </i> Restaurant to catch the game</p>
       </div>
     </div>
   </div>
@@ -151,37 +135,35 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   
   <!-- Contact -->
   <div class="w3-container" id="contact">
-    <h2>Contact</h2>
+    <h2>Contact Details</h2>
     <i class="fa fa-map-marker" style="width:30px"></i> Guinjata Bay, Inhambane, Mozambique<br>
     <i class="fa fa-phone" style="width:30px"></i> Phone: +27 83 670 0370<br>
-    <i class="fa fa-envelope" style="width:30px"> </i> Email: casaentreoscocos@gmail.com<br><br>
+    <i class="fa fa-envelope" style="width:30px"></i> Email: <a href="mailto:casaentreoscocos@gmail.com">casaentreoscocos@gmail.com</a><br><br>
+    <hr>
     <div id="map" style="width:100%;height:400px;"></div>
     <hr>
-    <p>Questions? Go ahead, ask them:</p>
+    <h2>Contact Form</h2>
+    <h5>Alternatively, please make use of the form below and we will contact you as soon as possible on the email provided:</h5>
     <div>
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-    <button type="submit" class="w3-button w3-green w3-third">Send a Message</button>
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" id="name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" id="email" required name="Email"></p>
+      <p><label> Check In</label></p>
+      <input class="w3-input w3-border" type="date" placeholder="YYYY MM DD" name="CheckIn" id="checkin" required>          
+      <p><label> Check Out</label></p>
+      <input class="w3-input w3-border" type="date" placeholder="YYYY MM DD" name="CheckOut" id="checkout"required>         
+      <p><label> Guests</label></p>
+      <input class="w3-input w3-border" type="number" value="1" name="Guests" min="1" max="8" id="guests">              
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" id="message" required name="Message"></p>
+    <button type="submit" class="w3-button w3-green w3-third" id="submit" onclick="sendMessage(document.getElementById('name').value, document.getElementById('email').value, document.getElementById('checkin').value, document.getElementById('checkout').value, document.getElementById('guests').value, document.getElementById('message').value)">Booking Enquiry</button>
     </div>
   </div>
   
-  <footer class="w3-container w3-padding-16" style="margin-top:32px">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
+  <footer class="w3-container w3-padding-16" style="margin-top:32px">Theme provided by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
 
 <!-- End page content -->
 </div>
 
 <script>
-// Script to open and close sidebar when on tablets and phones
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-        document.getElementById("myOverlay").style.display = "block";
-    }
- 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-        document.getElementById("myOverlay").style.display = "none";
-    }
 
 // Slideshow Apartment Images
     var slideIndex = 1;
@@ -211,25 +193,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
         dots[slideIndex-1].className += " w3-opacity-off";
 
     }
-
-    function setDate() {
-        var today = new Date();
-        document.getElementById("checkIn").min = today.toISOString().split('T')[0];
-        document.getElementById("checkIn").value = today.toISOString().split('T')[0];
-        document.getElementById("checkOut").min = document.getElementById("checkIn").value;
-        document.getElementById("checkOut").value = document.getElementById("checkIn").value;
-    }
-
-    function showMap() {
-            var mapOptions = { 
-                    center: [-24.068652, 35.49249],
-                    zoom: 15,
-                };
-            var map = new L.map("map", mapOptions);
-            var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
-            map.addLayer(layer);
-    }
-
 </script>
 
 </body>
