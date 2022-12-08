@@ -48,6 +48,11 @@ function setDate() {
     document.getElementById("checkout").value = today.toISOString().split('T')[0];
 }
 
+function getCurrentYear() {
+    const d = new Date();
+    document.getElementById('currentYear').innerHTML = String(d.getFullYear());
+}
+
 function showMap() {
     var mapOptions = { 
         center: [-24.068652, 35.49249],
