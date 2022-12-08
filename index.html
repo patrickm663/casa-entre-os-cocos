@@ -12,6 +12,7 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 .mySlides {display: none}
+textarea {resize: none}
 </style>
 </head>
 <body class="w3-content" onload="setDate(); showMap(); getCurrentYear()">
@@ -153,7 +154,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <input class="w3-input w3-border" type="date" placeholder="YYYY MM DD" name="CheckOut" id="checkout"required>         
       <p><label> Guests</label></p>
       <input class="w3-input w3-border" type="number" value="1" name="Guests" min="1" max="8" id="guests">              
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" id="message" required name="Message"></p>
+      <p><textarea class="w3-input w3-border" type="text" placeholder="Message" id="message" required name="Message" rows="5" cols="50"></textarea></p>
     <button type="submit" class="w3-button w3-green w3-third" id="submit" onclick="sendMessage(document.getElementById('name').value, document.getElementById('email').value, document.getElementById('checkin').value, document.getElementById('checkout').value, document.getElementById('guests').value, document.getElementById('message').value)">Booking Enquiry</button>
     </div>
   </div>
